@@ -9,7 +9,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: 'eligibility',
     question: 'Siapa saja yang berhak mengikuti kompetisi di Cakfest Vol.2?',
     answer:
-      'Cakfest Vol.2 terbuka untuk pelajar SMA/SMK/MA sederajat serta mahasiswa aktif D3/D4/S1 dari seluruh perguruan tinggi di Indonesia. Setiap peserta wajib melampirkan kartu identitas pelajar atau mahasiswa yang sah.',
+      'Cakfest Vol.2 terbuka untuk pelajar SMA/SMK/MA sederajat serta mahasiswa aktif D3/D4/S1 dari seluruh perguruan tinggi di Indonesia. Setiap peserta wajib melampirkan kartu identitas pelajar/KTM yang sah.',
   },
   {
     id: 'registration',

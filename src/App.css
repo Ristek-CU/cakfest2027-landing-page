@@ -12,7 +12,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 54px;
+  height: 58px;
   background: linear-gradient(90deg, #d7b5ff 0%, #a8efd6 51%, #ffd0bc 100%);
 }
 
@@ -24,13 +24,14 @@
 }
 
 .site-navbar__brand {
-  width: 160px;
-  height: 54px;
-  flex: 0 0 160px;
+  width: 172px;
+  height: 58px;
+  flex: 0 0 172px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 9px;
+  justify-content: flex-start;
+  gap: 13px;
+  padding-left: 21px;
   color: var(--cakfest-white);
   background: #070914;
   text-decoration: none;
@@ -38,8 +39,8 @@
 
 .site-navbar__eye {
   position: relative;
-  width: 21px;
-  height: 12px;
+  width: 23px;
+  height: 13px;
   border: 2px solid #f6feff;
   border-radius: 50% / 65%;
   transform: rotate(-2deg);
@@ -65,14 +66,14 @@
 }
 
 .site-navbar__mark strong {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 900;
 }
 
 .site-navbar__mark small {
   margin-top: 5px;
   color: var(--cakfest-magenta);
-  font-size: 6.5px;
+  font-size: 7.5px;
   font-weight: 800;
   letter-spacing: 2px;
 }
@@ -82,18 +83,18 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 13px;
-  padding: 0 clamp(36px, 8vw, 166px) 0 32px;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
 }
 
 .site-navbar__nav a {
-  padding: 8px 2px;
+  padding: 8px 0;
   border-radius: 999px;
   color: #11172d;
   text-decoration: none;
   text-transform: uppercase;
-  font: 900 10px/1 var(--font-brand-body);
+  font: 900 11px/1 var(--font-brand-body);
   letter-spacing: 0.45px;
   transition: color 160ms ease;
 }
@@ -105,8 +106,8 @@
 }
 
 .site-navbar__nav .site-navbar__cta {
-  margin-left: 3px;
-  padding: 10px 19px;
+  margin-left: 0;
+  padding: 11px 21px;
   color: #fff;
   background: linear-gradient(135deg, #fd47d6 0%, #a445ec 55%, #6940d8 100%);
   border: 1px solid rgba(255, 255, 255, 0.82);
@@ -140,9 +141,9 @@
 
 /* FAQ */
 .faq-section {
-  width: min(960px, calc(100% - 40px));
+  width: min(1040px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 72px 0 150px;
+  padding: 96px 0 150px;
   scroll-margin-top: 72px;
 }
 
@@ -154,7 +155,7 @@
 .faq-section__heading h2 {
   margin: 0 0 10px;
   color: var(--cakfest-white);
-  font: 900 clamp(28px, 3vw, 38px) / 1.12 var(--font-brand-title);
+  font: 900 clamp(30px, 3.2vw, 42px) / 1.12 var(--font-brand-title);
   letter-spacing: -0.5px;
   text-transform: uppercase;
 }
@@ -162,12 +163,12 @@
 .faq-section__heading p {
   margin: 0;
   color: #b9c3da;
-  font: 400 13.5px/1.55 var(--font-brand-body);
+  font: 400 14px/1.55 var(--font-brand-body);
 }
 
 .faq-section__card {
   width: 100%;
-  padding: 23px;
+  padding: 42px 26px 28px;
   border: 1px solid #2c3562;
   border-radius: 17px;
   background: rgba(13, 20, 52, 0.88);
@@ -176,7 +177,7 @@
 }
 
 .faq-item {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   overflow: hidden;
   border: 1px solid rgba(253, 71, 214, 0.26);
   border-radius: 8px;
@@ -200,18 +201,18 @@
 
 .faq-item button {
   width: 100%;
-  min-height: 48px;
+  min-height: 59px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 11px 16px;
+  padding: 13px 18px;
   border: 0;
   color: var(--cakfest-white);
   background: transparent;
   text-align: left;
   cursor: pointer;
-  font: 800 13.5px/1.35 var(--font-brand-body);
+  font: 800 15px/1.35 var(--font-brand-body);
 }
 
 .faq-item button:focus-visible {
@@ -220,9 +221,9 @@
 }
 
 .faq-item__icon {
-  width: 21px;
-  height: 21px;
-  flex: 0 0 21px;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -240,18 +241,20 @@
 }
 
 .faq-item__answer {
-  padding: 0 16px 17px;
+  padding: 16px 18px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .faq-item__answer p {
   margin: 0;
-  max-width: 850px;
+  max-width: 920px;
   color: #d1d8e8;
-  font: 400 13px/1.65 var(--font-brand-body);
+  font: 400 14px/1.65 var(--font-brand-body);
 }
 
 /* Footer */
 .site-footer {
+  position: relative;
   width: 100%;
   color: #cbd5e1;
   background: #050810;
@@ -259,18 +262,18 @@
 }
 
 .site-footer__grid {
-  width: min(1280px, calc(100% - 56px));
+  width: min(1320px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 54px 0 40px;
+  padding: 58px 0 44px;
   display: grid;
-  grid-template-columns: 1.45fr 0.9fr 1.15fr 1.2fr;
-  gap: 52px;
+  grid-template-columns: 1.45fr 1fr 1fr 1.2fr;
+  gap: 48px;
 }
 
 .site-footer h2 {
   margin: 0 0 15px;
   color: #fff;
-  font: 900 19px/1 var(--font-brand-title);
+  font: 900 21px/1 var(--font-brand-title);
   letter-spacing: 0.2px;
 }
 
@@ -281,7 +284,7 @@
 .site-footer h3 {
   margin: 1px 0 17px;
   color: #cbb5ef;
-  font: 800 10px/1.2 var(--font-mono);
+  font: 800 11px/1.2 var(--font-mono);
   letter-spacing: 0.75px;
   text-transform: uppercase;
 }
@@ -289,14 +292,14 @@
 .site-footer p {
   margin: 0 0 14px;
   color: #c3ccdc;
-  font: 400 12.5px/1.65 var(--font-brand-body);
+  font: 400 14px/1.65 var(--font-brand-body);
 }
 
 .site-footer small {
   display: block;
   max-width: 350px;
   color: #8390aa;
-  font: 400 10.5px/1.55 var(--font-brand-body);
+  font: 400 12px/1.55 var(--font-brand-body);
 }
 
 .site-footer__column nav {
@@ -309,7 +312,7 @@
 .site-footer a {
   color: #c7cfdf;
   text-decoration: none;
-  font: 400 12px/1.4 var(--font-brand-body);
+  font: 400 13.5px/1.4 var(--font-brand-body);
   transition: color 150ms ease;
 }
 
@@ -325,16 +328,24 @@
   font-weight: 700;
 }
 
+.site-footer__contact-label {
+  display: block;
+  margin-top: 13px;
+  color: #c17cff;
+  font: 800 9.5px/1 var(--font-mono);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
 .site-footer__bottom {
   position: relative;
-  width: min(1280px, calc(100% - 56px));
+  width: min(1320px, calc(100% - 64px));
   min-height: 64px;
   margin: 0 auto;
-  padding: 17px 52px;
+  padding: 17px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px;
   border-top: 1px solid rgba(93, 107, 150, 0.2);
   color: #5f6b84;
   font: 400 9px/1 var(--font-mono);
@@ -343,28 +354,59 @@
 .site-footer__badges {
   display: flex;
   justify-content: center;
-  gap: 7px;
+  gap: 10px;
 }
 
-.site-footer__badges span {
-  padding: 4px 7px;
-  border: 1px solid rgba(253, 71, 214, 0.38);
-  color: #c8b6eb;
+.site-footer__badge {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid #303a5f;
+  border-radius: 2px;
   background: #0d1124;
-  font-size: 7px;
+  font: 700 8px/1 var(--font-mono);
+}
+
+.site-footer__badge b,
+.site-footer__badge strong {
+  padding: 7px 9px;
+}
+
+.site-footer__badge b {
+  color: #d13fff;
+  background: #161333;
+}
+
+.site-footer__badge strong {
+  color: #f1f5f9;
+  background: #10182d;
 }
 
 .site-footer__top {
   position: absolute;
-  right: 0;
-  bottom: 17px;
-  width: 31px;
-  height: 31px;
+  right: 16px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
   border: 1px solid var(--cakfest-magenta);
   border-radius: 50%;
   color: #fff;
   background: #111736;
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 0;
+}
+
+.site-footer__top svg {
+  width: 18px;
+  height: 18px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .site-footer__top:hover,
@@ -375,8 +417,8 @@
 
 @media (max-width: 900px) {
   .site-navbar__brand {
-    width: 140px;
-    flex-basis: 140px;
+    width: 150px;
+    flex-basis: 150px;
   }
 
   .site-navbar__menu-button {
@@ -385,7 +427,7 @@
 
   .site-navbar__nav {
     position: absolute;
-    top: 62px;
+    top: 66px;
     left: 14px;
     right: 14px;
     height: auto;
@@ -422,13 +464,13 @@
 
 @media (max-width: 600px) {
   .site-navbar__brand {
-    width: 126px;
-    flex-basis: 126px;
+    width: 136px;
+    flex-basis: 136px;
   }
 
   .faq-section {
-    width: min(100% - 28px, 960px);
-    padding: 54px 0 100px;
+    width: min(100% - 28px, 1040px);
+    padding: 64px 0 100px;
   }
 
   .faq-section__heading {
@@ -444,7 +486,7 @@
   }
 
   .faq-section__card {
-    padding: 12px;
+    padding: 18px 12px 12px;
     border-radius: 13px;
   }
 
@@ -471,8 +513,6 @@
   .site-footer__bottom {
     width: calc(100% - 36px);
     padding: 18px 0 66px;
-    flex-direction: column;
-    gap: 11px;
     text-align: center;
   }
 
@@ -481,7 +521,7 @@
   }
 
   .site-footer__top {
-    right: 0;
+    right: 14px;
     bottom: 17px;
   }
 }
