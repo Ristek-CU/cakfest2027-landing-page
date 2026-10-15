@@ -1,0 +1,21 @@
+{
+  "name": "CAKFEST VOL.2 | Universitas Cakrawala",
+  "short_name": "CAKFEST VOL.2",
+  "description": "Portal resmi CAKFEST VOL.2 Universitas Cakrawala. Turn Your Spark Into Impact.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080d18",
+  "theme_color": "#080d18",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
