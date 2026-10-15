@@ -25,13 +25,12 @@ export function Navbar() {
     <header className="site-navbar">
       <div className="site-navbar__inner">
         <Link className="site-navbar__brand" to="/" onClick={() => setIsOpen(false)}>
-          <span className="site-navbar__mark" aria-hidden="true">
+          <span className="site-navbar__eye" aria-hidden="true">
+            <span />
+          </span>
+          <span className="site-navbar__mark">
             <strong>CAKFEST</strong>
             <small>VOL.2</small>
-          </span>
-          <span className="site-navbar__brand-copy">
-            <strong>Cakrawala Festival</strong>
-            <small>Universitas Cakrawala</small>
           </span>
         </Link>
 
