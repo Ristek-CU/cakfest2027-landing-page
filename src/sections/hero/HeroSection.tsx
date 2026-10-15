@@ -63,7 +63,7 @@ function HeroSection({ onOpenBooklet }: HeroSectionProps) {
   return (
     <header className="relative mb-8 w-full overflow-hidden border-b-2 border-white/10 bg-[#080d18] max-[768px]:mb-[18px]" id="beranda">
       <div className="relative w-full overflow-hidden">
-        <div className="grid min-h-[520px] w-full grid-cols-[1fr_1.05fr] bg-[#080d18] max-[960px]:grid-cols-1 max-[768px]:min-h-0">
+        <div className="grid min-h-[calc(100vh-52px)] w-full grid-cols-[1fr_1.05fr] bg-[#080d18] max-[960px]:min-h-0 max-[960px]:grid-cols-1 max-[768px]:min-h-0">
           <div className="z-[2] flex flex-col justify-between border-r border-purple-500/15 bg-[linear-gradient(145deg,#0e071c_0%,#1b0e36_100%)] px-[clamp(24px,4.5vw,64px)] py-11 text-slate-100 max-[768px]:border-0 max-[768px]:bg-[#090e24] max-[768px]:px-3.5 max-[768px]:py-5">
             <div>
               <div className="mb-3 inline-flex items-center gap-2 font-mono text-[11px] font-bold tracking-[.8px] text-purple-300 max-[768px]:mb-2 max-[768px]:text-[10px]">
