@@ -1,12 +1,16 @@
 import { useCallback, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import './App.css'
 import background from './assets/Background.jpg'
+import MakeItPopSection from './components/MakeItPopSection'
 import type { LombaModalState } from './lib/types'
+import HomePage from './pages/HomePage'
+import PillarDetailPage from './pages/pillars/[slug]'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 import LombaModal from './sections/lomba/LombaModal'
 import LombaSection from './sections/lomba/LombaSection'
 import HeroSection from './sections/hero/HeroSection'
-import HomePage from './pages/HomePage'
-import PillarDetailPage from './pages/pillars/[slug]'
 
 function LandingPage() {
   const [modal, setModal] = useState<LombaModalState | null>(null)
@@ -22,6 +26,7 @@ function LandingPage() {
   return (
     <>
       <HeroSection onOpenBooklet={() => openBooklet()} />
+      <MakeItPopSection />
       <main className="mx-auto flex w-[95%] max-w-[1280px] flex-col gap-16 px-0 pb-20 pt-8 max-[768px]:px-3.5 max-[768px]:pb-[60px] max-[768px]:pt-4">
         <LombaSection
           onRegister={(lomba) => {
@@ -63,11 +68,13 @@ function App() {
         />
       </div>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/pillars/:slug" element={<PillarDetailPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )
