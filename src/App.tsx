@@ -1,11 +1,14 @@
 import { useCallback, useState } from 'react'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import background from './assets/Background.jpg'
+import type { LombaModalState } from './lib/types'
 import LombaModal from './sections/lomba/LombaModal'
 import LombaSection from './sections/lomba/LombaSection'
 import HeroSection from './sections/hero/HeroSection'
-import type { LombaModalState } from './lib/types'
+import HomePage from './pages/HomePage'
+import PillarDetailPage from './pages/pillars/[slug]'
 
-function App() {
+function LandingPage() {
   const [modal, setModal] = useState<LombaModalState | null>(null)
 
   const openBooklet = useCallback((lomba?: LombaModalState['lomba']) => {
@@ -16,6 +19,31 @@ function App() {
     setModal(null)
   }, [])
 
+  return (
+    <>
+      <HeroSection onOpenBooklet={() => openBooklet()} />
+      <main className="mx-auto flex w-[95%] max-w-[1280px] flex-col gap-16 px-0 pb-20 pt-8 max-[768px]:px-3.5 max-[768px]:pb-[60px] max-[768px]:pt-4">
+        <LombaSection
+          onRegister={(lomba) => {
+            const message = encodeURIComponent(
+              `Halo Panitia Cakrawala Festival Vol.2! Saya ingin mendaftar untuk kompetisi: ${lomba.name}. Mohon panduan registrasi dan konfirmasi slot.`,
+            )
+            window.open(
+              `https://wa.me/62815347557?text=${message}`,
+              '_blank',
+              'noopener,noreferrer',
+            )
+          }}
+          onBooklet={openBooklet}
+        />
+      </main>
+      <HomePage />
+      <LombaModal modal={modal} onClose={closeModal} />
+    </>
+  )
+}
+
+function App() {
   return (
     <div className="relative isolate min-h-screen overflow-hidden">
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#080d18]">
@@ -34,25 +62,13 @@ function App() {
           }}
         />
       </div>
-      <HeroSection
-        onOpenBooklet={() => openBooklet()}
-      />
-      <main className="mx-auto flex w-[95%] max-w-[1280px] flex-col gap-16 px-0 pb-20 pt-8 max-[768px]:px-3.5 max-[768px]:pb-[60px] max-[768px]:pt-4">
-        <LombaSection
-          onRegister={(lomba) => {
-            const message = encodeURIComponent(
-              `Halo Panitia Cakrawala Festival Vol.2! Saya ingin mendaftar untuk kompetisi: ${lomba.name}. Mohon panduan registrasi dan konfirmasi slot.`,
-            )
-            window.open(
-              `https://wa.me/62815347557?text=${message}`,
-              '_blank',
-              'noopener,noreferrer',
-            )
-          }}
-          onBooklet={openBooklet}
-        />
-      </main>
-      <LombaModal modal={modal} onClose={closeModal} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/pillars/:slug" element={<PillarDetailPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
