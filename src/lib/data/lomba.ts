@@ -1,9 +1,9 @@
-import cccImage from '../../assets/lomba/ccc.jpg'
-import mlbbImage from '../../assets/lomba/mlbb.jpg'
-import basketImage from '../../assets/lomba/basket.jpg'
-import futsalImage from '../../assets/lomba/futsal.jpg'
-import tariImage from '../../assets/lomba/tari.jpg'
-import bandImage from '../../assets/lomba/band.jpg'
+import cccImage from '../../assets/lomba/ccc.webp'
+import mlbbImage from '../../assets/lomba/mlbb.webp'
+import basketImage from '../../assets/lomba/basket.webp'
+import futsalImage from '../../assets/lomba/futsal.webp'
+import tariImage from '../../assets/lomba/tari.webp'
+import bandImage from '../../assets/lomba/band.webp'
 
 export type Lomba = {
   code: string

@@ -25,9 +25,7 @@ export function Navbar() {
     <header className="site-navbar">
       <div className="site-navbar__inner">
         <Link className="site-navbar__brand" to="/" onClick={() => setIsOpen(false)}>
-          <span className="site-navbar__eye" aria-hidden="true">
-            <span />
-          </span>
+          <img className="site-navbar__logo" src="/icon-512.png" alt="" aria-hidden="true" width="34" height="34" />
           <span className="site-navbar__mark">
             <strong>CAKFEST</strong>
             <small>VOL.2</small>

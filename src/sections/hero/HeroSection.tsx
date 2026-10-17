@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import heroArtwork from '../../assets/hero_holo_visual_hd.png'
+import heroArtwork from '../../assets/hero_holo_visual_hd.webp'
 import Countdown from './Countdown'
 
 type HeroSectionProps = {
@@ -97,7 +97,7 @@ function HeroSection({ onOpenBooklet }: HeroSectionProps) {
           </div>
 
           <div className="relative flex min-h-[520px] items-center justify-center overflow-hidden bg-[#090d16] max-[768px]:min-h-[360px] max-[480px]:min-h-0 max-[480px]:flex-col max-[480px]:border-t max-[480px]:border-fuchsia-400/20 max-[480px]:bg-[#080d1e] max-[480px]:px-3.5 max-[480px]:pb-[18px] max-[480px]:pt-3">
-            <img src={heroArtwork} alt="Cakfest Holographic Cosmic Visual Art" className="block h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02] max-[480px]:hidden" />
+            <img src={heroArtwork} alt="Cakfest Holographic Cosmic Visual Art" className="block h-full w-full animate-hero-drift object-cover will-change-transform max-[480px]:hidden" />
             <div className={`absolute left-[18px] top-4 z-10 w-80 overflow-hidden rounded-[5px] border-2 border-[#525a6b] bg-[linear-gradient(180deg,#d8dce4_0%,#b4bac6_45%,#9aa1af_100%)] font-mono shadow-[0_12px_28px_rgba(0,0,0,.75),inset_1px_1px_0_rgba(255,255,255,.9),inset_-1px_-1px_0_rgba(0,0,0,.45)] transition-[box-shadow] hover:shadow-[0_16px_36px_rgba(0,0,0,.85),0_0_16px_rgba(168,85,247,.25)] max-[768px]:w-[min(320px,calc(100%-24px))] max-[480px]:relative max-[480px]:left-auto max-[480px]:top-auto max-[480px]:w-full max-[480px]:max-w-[360px] ${windowShaded ? 'h-6' : ''} ${playerVisible ? '' : 'hidden'}`} id="winampPlayer">
               <div className="flex h-[18px] items-center justify-between border-b border-[#081224] bg-[linear-gradient(180deg,#1c3664_0%,#0e2040_50%,#162c54_100%)] px-1.5 py-0.5 max-[480px]:h-5 max-[480px]:px-2">
                 <div className="flex items-center gap-[5px]">

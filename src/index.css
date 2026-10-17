@@ -10,6 +10,12 @@
   --animate-eq-5: eq-bounce-5 0.5s ease-in-out infinite alternate;
   --animate-fade-in: fade-in 0.35s ease-out both;
   --animate-fadeIn: fadeIn 0.25s ease-out both;
+  --animate-hero-drift: hero-drift 18s ease-in-out infinite alternate;
+
+  @keyframes hero-drift {
+    from { transform: scale(1.02) translate3d(0, 0, 0); }
+    to { transform: scale(1.07) translate3d(0, -1.5%, 0); }
+  }
 
   @keyframes winamp-scroll {
     from { transform: translateX(0); }
@@ -113,4 +119,18 @@ body {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

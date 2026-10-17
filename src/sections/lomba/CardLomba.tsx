@@ -1,4 +1,4 @@
-import paperTexture from '../../assets/paper_texture.jpg'
+import paperTexture from '../../assets/paper_texture.webp'
 import type { Lomba } from '../../lib/data/lomba'
 
 type CardLombaProps = {

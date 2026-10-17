@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import background from './assets/Background.jpg'
+import background from './assets/Background.webp'
 import MakeItPopSection from './components/MakeItPopSection'
 import type { LombaModalState } from './lib/types'
 import HomePage from './pages/HomePage'
@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="relative isolate min-h-screen overflow-hidden">
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-[#080d18]">
-        <div className="absolute inset-0 bg-cover bg-[center_top] opacity-[.82]" style={{ backgroundImage: `url(${background})` }} />
+        <div className="absolute inset-0 animate-hero-drift bg-cover bg-[center_top] opacity-[.82] will-change-transform" style={{ backgroundImage: `url(${background})` }} />
         <div
           className="absolute inset-0"
           style={{
