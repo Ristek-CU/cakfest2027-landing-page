@@ -24,12 +24,8 @@ export function Navbar() {
   return (
     <header className="site-navbar">
       <div className="site-navbar__inner">
-        <Link className="site-navbar__brand" to="/" onClick={() => setIsOpen(false)}>
-          <img className="site-navbar__logo" src="/icon-512.png" alt="" aria-hidden="true" width="34" height="34" />
-          <span className="site-navbar__mark">
-            <strong>CAKFEST</strong>
-            <small>VOL.2</small>
-          </span>
+        <Link className="site-navbar__brand" to="/" aria-label="CAKFEST Vol.2" onClick={() => setIsOpen(false)}>
+          <img className="site-navbar__logo" src="/icon-512.png" alt="" aria-hidden="true" width="44" height="44" />
         </Link>
 
         <nav id="primary-navigation" className={`site-navbar__nav${isOpen ? ' is-open' : ''}`} aria-label="Navigasi utama">

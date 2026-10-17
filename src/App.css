@@ -31,13 +31,12 @@
 }
 
 .site-navbar__brand {
-  width: 147px;
+  width: 88px;
   height: 50px;
-  flex: 0 0 147px;
+  flex: 0 0 88px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 11px;
   padding-left: 21px;
   color: var(--cakfest-white);
   background: #070914;
@@ -45,9 +44,9 @@
 }
 
 .site-navbar__logo {
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   object-fit: contain;
   transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -55,27 +54,6 @@
 .site-navbar__brand:hover .site-navbar__logo,
 .site-navbar__brand:focus-visible .site-navbar__logo {
   transform: scale(1.12) rotate(-4deg);
-}
-
-.site-navbar__mark {
-  display: flex;
-  flex-direction: column;
-  line-height: 0.85;
-  letter-spacing: 1.2px;
-  font-family: var(--font-brand-body);
-}
-
-.site-navbar__mark strong {
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.site-navbar__mark small {
-  margin-top: 4px;
-  color: var(--cakfest-magenta);
-  font-size: 7.5px;
-  font-weight: 800;
-  letter-spacing: 2px;
 }
 
 .site-navbar__nav {
@@ -418,11 +396,6 @@
 }
 
 @media (max-width: 900px) {
-  .site-navbar__brand {
-    width: 147px;
-    flex-basis: 147px;
-  }
-
   .site-navbar__menu-button {
     display: block;
   }
@@ -465,11 +438,6 @@
 }
 
 @media (max-width: 600px) {
-  .site-navbar__brand {
-    width: 136px;
-    flex-basis: 136px;
-  }
-
   .site-navbar__nav {
     padding: 14px;
   }
