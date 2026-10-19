@@ -402,7 +402,7 @@
 
   .site-navbar__nav {
     position: absolute;
-    top: 58px;
+    top: 50px;
     left: 14px;
     right: 14px;
     height: auto;
@@ -438,6 +438,45 @@
 }
 
 @media (max-width: 600px) {
+  .mobile-rundown,
+  .mobile-rundown tbody,
+  .mobile-rundown tr,
+  .mobile-rundown td {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-rundown thead {
+    display: none;
+  }
+
+  .mobile-rundown tr {
+    padding: 10px 0;
+    border-bottom: 1px solid #242f5e;
+  }
+
+  .mobile-rundown td {
+    padding: 5px 16px;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .mobile-rundown td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 3px;
+    color: #a5b4d4;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .site-navbar__brand {
+    width: 68px;
+    flex-basis: 68px;
+    padding-left: 12px;
+  }
+
   .site-navbar__nav {
     padding: 14px;
   }
@@ -456,7 +495,7 @@
   }
 
   .faq-section__heading p {
-    font-size: 12.5px;
+    font-size: 14px;
   }
 
   .faq-section__card {
@@ -465,8 +504,8 @@
   }
 
   .faq-item button {
-    padding: 12px;
-    font-size: 12.5px;
+    padding: 14px;
+    font-size: 14px;
   }
 
   .faq-item__answer {
@@ -474,7 +513,7 @@
   }
 
   .faq-item__answer p {
-    font-size: 12.5px;
+    font-size: 14px;
   }
 
   .site-footer__grid {

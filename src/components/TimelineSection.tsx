@@ -16,12 +16,10 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
 }) => {
   const { title, subtitle, months, events, rundown } = TIMELINE_SECTION_DATA;
 
-  // Initial active month is Jan 2027 (matching screenshot)
-  const [selectedMonthKey, setSelectedMonthKey] = useState<string>('2027-01');
-
-  // Default selected event is 2027-01-10 (Grand Final & Awarding Night)
-  const defaultEvent =
-    events.find((e) => e.date === '2027-01-10') || events[events.length - 1];
+  const nextEventMonth = events.find((event) => event.date >= new Date().toISOString().slice(0, 10))?.date.slice(0, 7);
+  const initialMonth = months.find((month) => month.key === nextEventMonth) ?? months[months.length - 1];
+  const [selectedMonthKey, setSelectedMonthKey] = useState<string>(initialMonth.key);
+  const defaultEvent = events.find((event) => event.date.startsWith(initialMonth.key)) ?? events[0];
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent>(defaultEvent);
 
   // Toggle state for Rundown Table
@@ -99,6 +97,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
   };
 
   const calendarDays = getDaysForMonth();
+  const monthEvents = events.filter((event) => event.date.startsWith(selectedMonthKey));
   const weekDayLabels = ['SENIN', 'SELASA', 'RABU', 'KAMIS', 'JUMAT', 'SABTU', 'MINGGU'];
 
   return (
@@ -158,7 +157,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
           </div>
 
           {/* Right: Month Selector Tabs */}
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center justify-center gap-2 sm:w-auto">
             {months.map((m) => {
               const isActive = m.key === selectedMonthKey;
               return (
@@ -166,7 +165,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
                   key={m.key}
                   type="button"
                   onClick={() => handleSelectMonth(m.key)}
-                  className={`px-4 sm:px-5 py-2 rounded-full text-xs font-['Aileron',sans-serif] font-extrabold tracking-wider uppercase transition-all duration-200 cursor-pointer ${
+                  className={`min-h-11 flex-1 px-2 sm:flex-none sm:px-5 py-2 rounded-full text-[11px] sm:text-xs font-['Aileron',sans-serif] font-extrabold tracking-wider uppercase transition-all duration-200 cursor-pointer ${
                     isActive
                       ? 'bg-[#fd47d6] text-white shadow-[0_0_18px_rgba(253,71,214,0.45)] border border-[#fd47d6]'
                       : 'bg-[#12193e] text-[#8e9cb8] hover:text-white border border-[#222c57] hover:border-[#38488a]'
@@ -179,8 +178,29 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
           </div>
         </div>
 
-        {/* Calendar Grid Container (responsive scroll for narrow screens) */}
-        <div className="w-full overflow-x-auto">
+        <div className="space-y-3 p-4 md:hidden" aria-label={`Agenda ${currentMonth.label}`}>
+          {monthEvents.map((event) => (
+            <button
+              key={event.date}
+              type="button"
+              onClick={() => setSelectedEvent(event)}
+              aria-pressed={selectedEvent.date === event.date}
+              className={`flex min-h-20 w-full items-center gap-4 rounded-xl border p-3 text-left transition-colors ${selectedEvent.date === event.date ? 'border-[#e0ff00] bg-[#1b2147]' : 'border-[#2e3770] bg-[#111936] hover:border-[#fd47d6]'}`}
+            >
+              <span className="flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-lg bg-[#25204a] text-sm font-black text-white">
+                <strong className="text-xl leading-none text-[#e0ff00]">{event.dayNumber}</strong>
+                <span className="mt-1 text-[10px]">{currentMonth.shortLabel.split(' ')[0]}</span>
+              </span>
+              <span className="min-w-0">
+                <strong className="block text-sm leading-snug text-white">{event.title}</strong>
+                <span className="mt-1 block text-xs text-slate-300">{event.venue}</span>
+              </span>
+            </button>
+          ))}
+        </div>
+
+        {/* Full calendar stays visible on wider screens. */}
+        <div className="hidden w-full overflow-x-auto md:block">
           <div className="min-w-[700px] w-full">
             {/* Weekday Row Header */}
             <div className="grid grid-cols-7 border-b border-[#1d2754] bg-[#090e24]/70">
@@ -367,7 +387,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
               {/* Collapsible Rundown Table */}
               {showRundownTable && (
                 <div className="w-full mt-6 overflow-x-auto rounded-xl border border-[#242f5e] bg-[#060a1e]/90 animate-fadeIn">
-                  <table className="w-full text-left border-collapse text-xs sm:text-[13px]">
+                  <table className="mobile-rundown w-full text-left border-collapse text-xs sm:text-[13px]">
                     <thead>
                       <tr className="bg-[#0e163b] text-[#93a1c2] border-b border-[#242f5e] font-['Aileron',sans-serif]">
                         <th className="py-3 px-4 font-extrabold uppercase tracking-wider">
@@ -392,16 +412,16 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
                             item.isAccent ? 'bg-[#151130]/50' : ''
                           }`}
                         >
-                          <td className="py-3.5 px-4 font-['JetBrains_Mono',monospace] font-bold text-[#f1f5f9] whitespace-nowrap">
+                          <td data-label="Tanggal" className="py-3.5 px-4 font-['JetBrains_Mono',monospace] font-bold text-[#f1f5f9] whitespace-nowrap">
                             {item.dateRange}
                           </td>
-                          <td className="py-3.5 px-4 text-[#e2e8f0] font-medium">
+                          <td data-label="Agenda" className="py-3.5 px-4 text-[#e2e8f0] font-medium">
                             {item.agenda}
                           </td>
-                          <td className="py-3.5 px-4 text-[#94a3b8]">
+                          <td data-label="Lokasi" className="py-3.5 px-4 text-[#cbd5e1]">
                             {item.venue}
                           </td>
-                          <td className="py-3.5 px-4 text-center whitespace-nowrap">
+                          <td data-label="Status" className="py-3.5 px-4 text-center whitespace-nowrap">
                             <span
                               className={`inline-block px-3 py-1 rounded-full text-[10.5px] font-['JetBrains_Mono',monospace] font-extrabold tracking-wider uppercase ${
                                 item.status === 'PUNCAK ACARA'

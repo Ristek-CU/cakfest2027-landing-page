@@ -33,23 +33,23 @@ function CardLomba({ lomba, onRegister, onBooklet }: CardLombaProps) {
         </div>
       </div>
       <div className="relative z-[2] flex flex-1 flex-col p-5 px-[22px] pb-[22px] max-[480px]:px-3.5 max-[480px]:pb-3">
-        <h3 className={`mb-1 font-[Aileron] text-xl leading-[1.2] font-black tracking-[-.3px] ${lomba.code === 'MLBB' ? 'text-[#fd47d6]' : 'text-[#192271]'} max-[480px]:text-base`}>
+        <h3 className={`mb-1 font-[Aileron] text-xl leading-[1.2] font-black tracking-[-.3px] ${lomba.code === 'MLBB' ? 'text-[#a90087]' : 'text-[#192271]'} max-[480px]:text-lg`}>
           {lomba.name}
         </h3>
-        <p className="mb-2 mt-0.5 font-[Aileron] text-[11.5px] leading-[1.35] font-extrabold tracking-wide text-[#fd47d6] uppercase max-[480px]:mb-1.5 max-[480px]:text-[11px]">
+        <p className="mb-2 mt-0.5 font-[Aileron] text-[11.5px] leading-[1.35] font-extrabold tracking-wide text-[#a90087] uppercase max-[480px]:mb-1.5 max-[480px]:text-xs">
           {lomba.tagline}
         </p>
-        <p className="mb-3.5 text-[13.5px] leading-relaxed font-medium text-slate-700 max-[480px]:mb-2.5 max-[480px]:text-xs max-[480px]:leading-[1.48]">
+        <p className="mb-3.5 text-[13.5px] leading-relaxed font-medium text-slate-700 max-[480px]:mb-2.5 max-[480px]:text-sm max-[480px]:leading-relaxed">
           {lomba.description}
         </p>
         <div className="mt-auto mb-3.5 grid grid-cols-2 gap-2.5 rounded-lg border border-[#192271]/[.16] border-t-2 border-t-dashed border-t-[#192271]/30 bg-white/85 p-2.5 px-3">
           <div className="flex flex-col">
-            <span className="font-[Aileron] text-[10px] font-extrabold tracking-wide text-slate-500 uppercase max-[480px]:text-[8px]">TOTAL HADIAH</span>
-            <strong className="font-[Aileron] text-sm font-black text-[#192271] max-[480px]:text-xs">{lomba.prize}</strong>
+            <span className="font-[Aileron] text-[10px] font-extrabold tracking-wide text-slate-600 uppercase">TOTAL HADIAH</span>
+            <strong className="font-[Aileron] text-sm font-black text-[#192271]">{lomba.prize}</strong>
           </div>
           <div className="flex flex-col">
-            <span className="font-[Aileron] text-[10px] font-extrabold tracking-wide text-slate-500 uppercase max-[480px]:text-[8px]">BIAYA REGISTRASI</span>
-            <strong className="font-[Aileron] text-sm font-black text-[#fd47d6] max-[480px]:text-xs">{lomba.registrationFee}</strong>
+            <span className="font-[Aileron] text-[10px] font-extrabold tracking-wide text-slate-600 uppercase">BIAYA REGISTRASI</span>
+            <strong className="font-[Aileron] text-sm font-black text-[#a90087]">{lomba.registrationFee}</strong>
           </div>
         </div>
         <div className="mt-3.5 flex w-full items-center gap-2.5 max-[499px]:flex-col max-[499px]:gap-2">

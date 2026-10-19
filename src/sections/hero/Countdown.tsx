@@ -47,22 +47,22 @@ function Countdown() {
         aria-label={`${timeLeft.days} hari ${timeLeft.hours} jam ${timeLeft.minutes} menit ${timeLeft.seconds} detik`}
       >
         <div className="max-w-[90px] flex-1 rounded-xl border-[1.5px] border-lime-300/50 bg-[#080c20] px-1.5 py-2.5 text-center shadow-[inset_0_2px_6px_rgba(0,0,0,.8),0_4px_12px_rgba(0,0,0,.4)] transition hover:-translate-y-0.5 hover:border-[#e0ff00]">
-          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-white [text-shadow:0_0_12px_rgba(255,255,255,.6)] max-[400px]:text-[19px]">{timeLeft.days}</div>
+          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-white [text-shadow:0_0_12px_rgba(255,255,255,.6)] max-[400px]:text-[23px]">{timeLeft.days}</div>
           <div className="mt-1.5 font-[Aileron] text-[11px] font-extrabold tracking-[1.5px] text-[#fd47d6]">HARI</div>
         </div>
         <div className="animate-pulse select-none font-[Aileron] text-[26px] font-black text-[#fd47d6] opacity-85 max-[480px]:hidden">:</div>
         <div className="max-w-[90px] flex-1 rounded-xl border-[1.5px] border-lime-300/50 bg-[#080c20] px-1.5 py-2.5 text-center shadow-[inset_0_2px_6px_rgba(0,0,0,.8),0_4px_12px_rgba(0,0,0,.4)] transition hover:-translate-y-0.5 hover:border-[#e0ff00]">
-          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-white [text-shadow:0_0_12px_rgba(255,255,255,.6)] max-[400px]:text-[19px]">{timeLeft.hours}</div>
+          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-white [text-shadow:0_0_12px_rgba(255,255,255,.6)] max-[400px]:text-[23px]">{timeLeft.hours}</div>
           <div className="mt-1.5 font-[Aileron] text-[11px] font-extrabold tracking-[1.5px] text-[#fd47d6]">JAM</div>
         </div>
         <div className="animate-pulse select-none font-[Aileron] text-[26px] font-black text-[#fd47d6] opacity-85 max-[480px]:hidden">:</div>
         <div className="max-w-[90px] flex-1 rounded-xl border-[1.5px] border-lime-300/50 bg-[#080c20] px-1.5 py-2.5 text-center shadow-[inset_0_2px_6px_rgba(0,0,0,.8),0_4px_12px_rgba(0,0,0,.4)] transition hover:-translate-y-0.5 hover:border-[#e0ff00]">
-          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-white [text-shadow:0_0_12px_rgba(255,255,255,.6)] max-[400px]:text-[19px]">{timeLeft.minutes}</div>
+          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-white [text-shadow:0_0_12px_rgba(255,255,255,.6)] max-[400px]:text-[23px]">{timeLeft.minutes}</div>
           <div className="mt-1.5 font-[Aileron] text-[11px] font-extrabold tracking-[1.5px] text-[#fd47d6]">MENIT</div>
         </div>
         <div className="animate-pulse select-none font-[Aileron] text-[26px] font-black text-[#fd47d6] opacity-85 max-[480px]:hidden">:</div>
         <div className="max-w-[90px] flex-1 rounded-xl border-[1.5px] border-fuchsia-400/60 bg-[#190f2d] px-1.5 py-2.5 text-center shadow-[inset_0_2px_6px_rgba(0,0,0,.8),0_4px_12px_rgba(0,0,0,.4)] transition hover:-translate-y-0.5 hover:border-[#fd47d6]">
-          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-[#e0ff00] [text-shadow:0_0_16px_rgba(224,255,0,.75)] max-[400px]:text-[19px]">{timeLeft.seconds}</div>
+          <div className="font-[Aileron] text-[clamp(30px,4.4vw,44px)] leading-none font-black tracking-wide text-[#e0ff00] [text-shadow:0_0_16px_rgba(224,255,0,.75)] max-[400px]:text-[23px]">{timeLeft.seconds}</div>
           <div className="mt-1.5 font-[Aileron] text-[11px] font-extrabold tracking-[1.5px] text-[#e0ff00]">DETIK</div>
         </div>
       </div>
