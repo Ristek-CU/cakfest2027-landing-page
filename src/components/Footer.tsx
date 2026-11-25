@@ -1,5 +1,4 @@
 const footerLinks = [
-  { label: 'Make It Pop', href: '/#make-it-pop' },
   { label: '6 Cabang Lomba', href: '/#kompetisi' },
   { label: 'Timeline Acara', href: '/#timeline' },
   { label: 'FAQ', href: '/#faq' },

@@ -2,7 +2,6 @@ import { useCallback, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import background from './assets/Background.webp'
-import MakeItPopSection from './components/MakeItPopSection'
 import type { LombaModalState } from './lib/types'
 import HomePage from './pages/HomePage'
 import PillarDetailPage from './pages/pillars/[slug]'
@@ -26,7 +25,6 @@ function LandingPage() {
   return (
     <>
       <HeroSection onOpenBooklet={() => openBooklet()} />
-      <MakeItPopSection />
       <main className="mx-auto flex w-[95%] max-w-[1280px] flex-col gap-16 px-0 pb-20 pt-8 max-[768px]:px-3.5 max-[768px]:pb-[60px] max-[768px]:pt-4">
         <LombaSection
           onRegister={(lomba) => {

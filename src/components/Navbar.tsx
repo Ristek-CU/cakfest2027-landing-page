@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Make It Pop', id: 'make-it-pop' },
   { label: 'Lomba', id: 'kompetisi' },
   { label: 'Timeline', id: 'timeline' },
   { label: 'FAQ', id: 'faq' },

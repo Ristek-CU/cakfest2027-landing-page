@@ -1,9 +1,7 @@
 import cccImage from '../../assets/lomba/ccc.webp'
 import mlbbImage from '../../assets/lomba/mlbb.webp'
-import basketImage from '../../assets/lomba/basket.webp'
 import futsalImage from '../../assets/lomba/futsal.webp'
 import tariImage from '../../assets/lomba/tari.webp'
-import bandImage from '../../assets/lomba/band.webp'
 
 export type Lomba = {
   code: string
@@ -19,18 +17,6 @@ export type Lomba = {
 
 export const dataLomba: Lomba[] = [
   {
-    code: 'CCC',
-    name: 'CERDAS CERMAT (CCC DECATHLON)',
-    tagline: 'Multidisiplin Decathlon: Strategi Taktis, Ketangkasan, & Logika Terpadu',
-    description:
-      'Ajang supremasi tertinggi perguruan tinggi memperebutkan Piala Bergilir Rektorat lewat 3 etape kompetisi terintegrasi.',
-    badge: 'KATEGORI UTAMA & PRESTISIUS',
-    prize: 'Rp 15.000.000',
-    registrationFee: 'Rp 350.000 / Tim',
-    image: cccImage,
-    imageAlt: 'Arena kompetisi Cakrawala Champions Challenge',
-  },
-  {
     code: 'MLBB',
     name: 'MOBILE LEGENDS: BANG BANG',
     tagline: 'Tournament Draft Pick Custom 5v5 + 1 Cadangan',
@@ -41,18 +27,6 @@ export const dataLomba: Lomba[] = [
     registrationFee: 'Rp 150.000 / Tim',
     image: mlbbImage,
     imageAlt: 'Arena kompetisi Mobile Legends',
-  },
-  {
-    code: 'BASKET',
-    name: '3X3 BASKETBALL BATTLE',
-    tagline: 'Kategori Pelajar & Mahasiswa (FIBA Rules)',
-    description:
-      'Format half-court intensif 10 menit standar FIBA 3x3 resmi dengan wasit berlisensi nasional.',
-    badge: 'SPORTS DIVISION',
-    prize: 'Rp 7.500.000',
-    registrationFee: 'Rp 200.000 / Tim',
-    image: basketImage,
-    imageAlt: 'Lapangan kompetisi basket 3x3',
   },
   {
     code: 'FUTSAL',
@@ -67,27 +41,27 @@ export const dataLomba: Lomba[] = [
     imageAlt: 'Lapangan kompetisi futsal',
   },
   {
-    code: 'TARI',
-    name: 'MODERN DANCE & TARI KREASI',
-    tagline: 'Kompetisi Modern Dance & Seni Kreasi Nusantara',
+    code: 'BMC',
+    name: 'BMC (BUSINESS MODEL CANVAS)',
+    tagline: 'Kompetisi tim beranggotakan 3 orang',
     description:
-      'Eksplorasi gerak tari nusantara kontemporer berbalut aransemen musik modern dinilai oleh maestro tari.',
-    badge: 'ARTS & CULTURE',
-    prize: 'Rp 4.000.000',
-    registrationFee: 'Rp 150.000 / Tim',
-    image: tariImage,
-    imageAlt: 'Pertunjukan tari tradisional dan kreasi',
+      'Penilaian dilakukan oleh juri menggunakan papan nilai, bukan bagan pertandingan. Skor tiap kriteria dijumlahkan untuk menentukan total nilai dan peringkat akhir.',
+    badge: 'BUSINESS COMPETITION',
+    prize: 'Informasi menyusul',
+    registrationFee: 'Informasi menyusul',
+    image: cccImage,
+    imageAlt: 'Arena kompetisi Cakrawala Champions Challenge',
   },
   {
-    code: 'BAND',
-    name: 'SOLO VOKAL & BAND AKUSTIK',
-    tagline: 'Kompetisi Solo Vokal & Band Akustik Kampus',
+    code: 'POSTER',
+    name: 'POSTER DESIGN',
+    tagline: 'Kompetisi desain poster individu',
     description:
-      'Panggung musikalitas kampus membawakan 1 lagu wajib retro & 1 lagu bebas. Pemenang tampil di Awarding Night!',
-    badge: 'MUSIC & VOCAL',
-    prize: 'Rp 4.000.000',
-    registrationFee: 'Rp 150.000 / Tim',
-    image: bandImage,
-    imageAlt: 'Panggung penampilan band CAKFEST',
+      'Karya dinilai oleh juri menggunakan papan nilai, bukan bagan pertandingan. Skor tiap kriteria dijumlahkan untuk menentukan total nilai dan peringkat akhir.',
+    badge: 'DESIGN COMPETITION',
+    prize: 'Informasi menyusul',
+    registrationFee: 'Informasi menyusul',
+    image: tariImage,
+    imageAlt: 'Pertunjukan tari tradisional dan kreasi',
   },
 ]

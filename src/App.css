@@ -14,13 +14,6 @@
   z-index: 50;
   height: 50px;
   background: linear-gradient(90deg, #d8b4fe 0%, #a7f3d0 25%, #fef08a 50%, #fbcfe8 75%, #bfdbfe 100%);
-  background-size: 200% 100%;
-  animation: navbar-sheen 14s linear infinite;
-}
-
-@keyframes navbar-sheen {
-  from { background-position: 0% 50%; }
-  to { background-position: 200% 50%; }
 }
 
 .site-navbar__inner {
